@@ -1,11 +1,11 @@
-Post http://localhost:3001/upload
+Post http://localhost:3002/usuarios
 content-type: application/json
 
-{"name":"RMC","email":"mresnicoff@gmail.com", "subject":"mentorias","message":"Hola Chicos como les va"}
+{"email":"f@g.com","password":"123456"}
 
 
 ###
-GET http://localhost:3001/localhost:3001/news/4
+GET http://localhost:3001/localhost:5432/news
 
 ###
 GET http://localhost:3001/getdatos?zona=General%20Paz

@@ -1,5 +1,5 @@
 const { prisma } = require("../../db.js");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const nuevoUsuario = async (req, res) => {
     if (req.method === "POST") {
