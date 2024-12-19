@@ -1,0 +1,35 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Usuario {
+  id             Int      @id @default(autoincrement())
+  email          String   @unique
+  nombre         String   @db.Text
+  avatar         String
+  passhasheada   String
+  puedeescribir  Boolean
+  linkautor      String?  @db.Text
+  tokenEmail     String?  @db.Text
+  noticias       Noticia[]
+
+  @@map("usuarios")
+}
+
+model Noticia {
+  id           Int      @id @default(autoincrement())
+  date         DateTime
+  autor       Usuario  @relation(fields: [usuarioId], references: [id])
+  usuarioId     Int
+  title        String
+  description  String   @db.Text
+  image        String?  @db.Text
+  likes        Int      @default(0)
+
+  @@map("noticias")
+}

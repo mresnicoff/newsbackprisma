@@ -1,0 +1,22 @@
+Post http://localhost:3001/upload
+content-type: application/json
+
+{"name":"RMC","email":"mresnicoff@gmail.com", "subject":"mentorias","message":"Hola Chicos como les va"}
+
+
+###
+GET http://localhost:3001/localhost:3001/news/4
+
+###
+GET http://localhost:3001/getdatos?zona=General%20Paz
+
+###
+POST http://localhost:3001/reset-password
+content-type: application/json
+
+   {"token": "vyyy4g", "password": "1234567" }
+###
+Post http://localhost:3001/upload
+content-type: application/json
+
+{"name":"RMC","email":"mresnicoff@gmail.com", "subject":"mentorias","message":"Hola Chicos como les va"}
