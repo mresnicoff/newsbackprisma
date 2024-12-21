@@ -5,7 +5,10 @@ content-type: application/json
 
 
 ###
-GET http://localhost:3001/localhost:5432/news
+POST https://newsbackprisma.vercel.app/registrarse
+content-type: application/json
+
+{"email":"f@g.com","password":"123456"}
 
 ###
 GET http://localhost:3001/getdatos?zona=General%20Paz

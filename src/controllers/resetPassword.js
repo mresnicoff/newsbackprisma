@@ -21,7 +21,7 @@ const resetPasswordController = async (req, res) => {
 
   try {
     // Encuentra el usuario por el token de email
-    const usuario = await prisma.usuario.findUnique({ 
+    const usuario = await prisma.usuario.findFirst({ 
       where: { tokenEmail: token }
     });
 
@@ -39,7 +39,7 @@ const resetPasswordController = async (req, res) => {
     await prisma.usuario.update({
       where: { id: usuario.id }, // Asegúrate de que 'id' es la clave primaria en tu modelo
       data: {
-        password: hashedPassword, // Asegúrate de que tu modelo Usuario tenga el campo password configurado para usar este valor
+        passhasheada: hashedPassword, // Asegúrate de que tu modelo Usuario tenga el campo password configurado para usar este valor
         tokenEmail: null // Limpia el token de email ya que el proceso ha terminado
       }
     });
