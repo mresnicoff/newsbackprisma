@@ -1,19 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "index.js", "use": "@vercel/node" }
-  ],
   "routes": [
     { "src": "/(.*)", "dest": "index.js" }
   ],
   "build": {
     "env": {
-      "REACT_APP_API_URL":"http://localhost:3002/",
-
-      "EMAIL":"flightdeck2023@gmail.com",
-      "EMAIL_PASS":"gohwtxlaewqfwpou",
-         "appUrl":"https://mresnicoff.github.io/misnoticias/",
-   "POSTGRES_PRISMA_URL":"postgres://postgres.kgqsdhfvpourbhelvprz:gym2FoQZSHbtKEsV@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
+      "REACT_APP_API_URL": "http://localhost:3002/",
+      "EMAIL": "flightdeck2023@gmail.com",
+      "EMAIL_PASS": "gohwtxlaewqfwpou",
+      "appUrl": "https://mresnicoff.github.io/misnoticias/",
+      "POSTGRES_PRISMA_URL": "postgres://postgres.kgqsdhfvpourbhelvprz:gym2FoQZSHbtKEsV@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
     }   
   }
 }
