@@ -6,7 +6,7 @@
   ],
   "build": {
     "env": {
-      "REACT_APP_API_URL": "http://localhost:3002/",
+      "REACT_APP_API_URL": "https://newsbackprisma.vercel.app/",
       "EMAIL": "flightdeck2023@gmail.com",
       "EMAIL_PASS": "gohwtxlaewqfwpou",
       "appUrl": "https://mresnicoff.github.io/misnoticias/",
