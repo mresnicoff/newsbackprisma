@@ -1,16 +1,15 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/(.*)", "dest": "index.js", 
-    "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"] }
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@now/node"
+    }
   ],
-  "build": {
-    "env": {
-      "REACT_APP_API_URL": "https://newsbackprisma.vercel.app/",
-      "EMAIL": "flightdeck2023@gmail.com",
-      "EMAIL_PASS": "gohwtxlaewqfwpou",
-      "appUrl": "https://mresnicoff.github.io/misnoticias/",
-      "POSTGRES_PRISMA_URL": "postgres://postgres.kgqsdhfvpourbhelvprz:gym2FoQZSHbtKEsV@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
-    }   
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
 }
