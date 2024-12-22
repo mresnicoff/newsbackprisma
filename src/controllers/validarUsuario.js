@@ -10,7 +10,7 @@ const validarUsuario = async (req, res) => {
 
       if (datos.email && datos.password) {
         // Buscar usuario por email
-        const user = await prisma.usuario.findUnique({
+        const user = await prisma.usuario.findFirst({
           where: { email: datos.email },
         });
 
