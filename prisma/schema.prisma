@@ -30,6 +30,7 @@ model Noticia {
   description  String   @db.Text
   image        String?  @db.Text
   likes        Int      @default(0)
+  categoria    String? 
 
   @@map("noticias")
 }
